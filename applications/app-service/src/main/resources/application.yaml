@@ -1,0 +1,13 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: "ejemplo-ddd"
+  devtools:
+    add-properties: false
+
+  profiles:
+    include: null
+  data:
+    mongodb:
+      uri: "mongodb+srv://john:123@primercluster.9sooq.mongodb.net/pruebaDB?retryWrites=true&w=majority"

@@ -2,14 +2,14 @@ package co.com.bancolombia.model.movie.values;
 
 public class Nombre {
 
-    private final String titulo;
+    private final String nombre;
 
-    public Nombre(String titulo) {
-        this.titulo = titulo;
+    public Nombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public  String getTitulo(){
-        return titulo;
+    public  String getNombre(){
+        return nombre;
     }
 
 }

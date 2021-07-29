@@ -5,6 +5,7 @@ public class CategoryId {
     private final String id;
 
     public CategoryId(String id) {
+
         this.id = id;
     }
 

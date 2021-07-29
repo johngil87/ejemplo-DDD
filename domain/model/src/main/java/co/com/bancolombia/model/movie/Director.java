@@ -1,6 +1,6 @@
 package co.com.bancolombia.model.movie;
 
-import co.com.bancolombia.model.movie.values.DirectorId;
+
 import lombok.Builder;
 import lombok.Data;
 
@@ -8,23 +8,13 @@ import lombok.Data;
 @Builder(toBuilder = true)
 public class Director {
 
-    private DirectorId directorId;
     private String nombre;
 
-    public Director(DirectorId directorId, String nombre) {
-        this.directorId = directorId;
+    public Director(String nombre) {
         this.nombre = nombre;
     }
 
     public Director() {
-    }
-
-    public DirectorId getDirectorId() {
-        return directorId;
-    }
-
-    public void setDirectorId(DirectorId directorId) {
-        this.directorId = directorId;
     }
 
     public String getNombre() {

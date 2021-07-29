@@ -10,6 +10,8 @@ public interface MovieRepository {
 
     List<Movie> findAllMovie();
 
+    List<Movie> findAllMovieTop();
+
     Movie findMovieById(String id);
 
     Movie findByCategory(CategoryId id);

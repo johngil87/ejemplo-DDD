@@ -3,27 +3,44 @@ package co.com.bancolombia.api;
 import co.com.bancolombia.model.movie.Category;
 import co.com.bancolombia.model.movie.Character;
 import co.com.bancolombia.model.movie.Director;
-import co.com.bancolombia.model.movie.values.Puntaje;
+import co.com.bancolombia.model.movie.values.PlotMovie;
+import co.com.bancolombia.model.movie.values.UrlResource;
 
-import java.util.List;
 import java.util.Set;
 
 public class MovieDTO {
 
     private String id;
-    private String nombre;
-    private Double puntaje;
+    private String title;
+    private Double rate;
     private Director movieDirector;
-    private Set<Character> actores;
-    private Category categoria;
+    private Set<Character> characters;
+    private Set<Category> category;
+    private UrlResource urlTrailer;
+    private UrlResource urlImage;
+    private PlotMovie plot;
 
-    public MovieDTO(String id, String nombre, Double puntaje, Director director, Set<Character> actores, Category categoria) {
+
+
+    public MovieDTO(String id, String title, Double rate, Director movieDirector, Set<Character> characters, Set<Category> category, UrlResource urlTrailer, UrlResource urlImage, PlotMovie plot) {
         this.id = id;
-        this.nombre = nombre;
-        this.puntaje = puntaje;
+        this.title = title;
+        this.rate = rate;
+        this.movieDirector = movieDirector;
+        this.characters = characters;
+        this.category = category;
+        this.urlTrailer = urlTrailer;
+        this.urlImage = urlImage;
+        this.plot = plot;
+    }
+
+    public MovieDTO(String id, String title, Double puntaje, Director director, Set<Character> actores, Set<Category> categoria) {
+        this.id = id;
+        this.title = title;
+        this.rate = puntaje;
         this.movieDirector = director;
-        this.actores = actores;
-        this.categoria = categoria;
+        this.characters = actores;
+        this.category = categoria;
     }
 
     public MovieDTO() {
@@ -37,20 +54,20 @@ public class MovieDTO {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getTitle() {
+        return title;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public Double getPuntaje() {
-        return puntaje;
+    public Double getRate() {
+        return rate;
     }
 
-    public void setPuntaje(Double puntaje) {
-        this.puntaje = puntaje;
+    public void setRate(Double rate) {
+        this.rate = rate;
     }
 
     public Director getMovieDirector() {
@@ -61,19 +78,43 @@ public class MovieDTO {
         this.movieDirector = movieDirector;
     }
 
-    public Set<Character> getActores() {
-        return actores;
+    public Set<Character> getCharacters() {
+        return characters;
     }
 
-    public void setActores(Set<Character> actores) {
-        this.actores = actores;
+    public void setCharacters(Set<Character> characters) {
+        this.characters = characters;
     }
 
-    public Category getCategoria() {
-        return categoria;
+    public Set<Category> getCategory() {
+        return category;
     }
 
-    public void setCategoria(Category categoria) {
-        this.categoria = categoria;
+    public UrlResource getUrlTrailer() {
+        return urlTrailer;
+    }
+
+    public void setUrlTrailer(UrlResource urlTrailer) {
+        this.urlTrailer = urlTrailer;
+    }
+
+    public UrlResource getUrlImage() {
+        return urlImage;
+    }
+
+    public void setUrlImage(UrlResource urlImage) {
+        this.urlImage = urlImage;
+    }
+
+    public PlotMovie getPlot() {
+        return plot;
+    }
+
+    public void setPlot(PlotMovie plot) {
+        this.plot = plot;
+    }
+
+    public void setCategory(Set<Category> category) {
+        this.category = category;
     }
 }
